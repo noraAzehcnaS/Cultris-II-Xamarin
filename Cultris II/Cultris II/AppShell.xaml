@@ -7,7 +7,8 @@
     xmlns:local="clr-namespace:Cultris_II.Views"
     Title="Cultris_II"
     x:DataType="cultris_ii:AppShell"
-    FlyoutBackgroundColor="{StaticResource AppBackgroundColor}">
+    FlyoutBackgroundColor="{StaticResource AppBackgroundColor}"
+    FlyoutWidth="250">
 
     <!--
         The overall app visual hierarchy is defined here, along with navigation.
@@ -17,6 +18,28 @@
 
     <Shell.Resources>
         <ResourceDictionary>
+            <Style ApplyToDerivedTypes="True" TargetType="Label">
+                <Setter Property="TextColor" Value="LightGray" />
+            </Style>
+            <Style TargetType="Button">
+                <Setter Property="TextColor" Value="{StaticResource CultrisWhite}" />
+                <Setter Property="VisualStateManager.VisualStateGroups">
+                    <VisualStateGroupList>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal">
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundColor" Value="{StaticResource ItemBackgroundColor}" />
+                                </VisualState.Setters>
+                            </VisualState>
+                            <VisualState x:Name="Disabled">
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundColor" Value="{StaticResource CultrisGray}" />
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateGroupList>
+                </Setter>
+            </Style>
             <Style x:Key="BaseStyle" TargetType="Element">
                 <Setter Property="Shell.BackgroundColor" Value="{StaticResource ItemBackgroundColor}" />
                 <Setter Property="Shell.ForegroundColor" Value="White" />
@@ -39,6 +62,7 @@
                 ApplyToDerivedTypes="True"
                 Class="FlyoutItemLayoutStyle"
                 TargetType="Layout">
+                <Setter Property="HeightRequest" Value="50" />
                 <Setter Property="VisualStateManager.VisualStateGroups">
                     <VisualStateGroupList>
                         <VisualStateGroup x:Name="CommonStates">

@@ -12,8 +12,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Views\CustomViews\TableRow2.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
+    <Folder Include="Views\CustomViews\" />
   </ItemGroup>
 </Project>

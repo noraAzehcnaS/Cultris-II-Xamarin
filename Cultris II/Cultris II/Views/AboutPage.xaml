@@ -29,7 +29,7 @@
         </StackLayout>
         <ScrollView Grid.Row="1">
             <StackLayout
-                Padding="0,32,0,32"
+                Padding="36"
                 HorizontalOptions="Center"
                 Orientation="Vertical">
                 <Label
@@ -37,20 +37,20 @@
                     FontSize="Title"
                     Text="The App"
                     TextColor="White" />
-                <Label FontSize="Body" Text="This app's purpose is to augment the players experience by provinding services that benefit them." />
-                <Label FontSize="Body" Text="From the app, players can check in on the state of the game without having to be on the computer." />
-                <Label FontSize="Body" Text="To enhance the joy of climbing the ranks, players are rewarded throughout the app's visuals." />
-                <Label FontSize="Body">
+                <Label Text="This app's purpose is to augment the players experience by provinding services that benefit them." />
+                <Label Text="From the app, players can check in on the state of the game without having to be on the computer." />
+                <Label Text="To enhance the joy of climbing the ranks, players are rewarded throughout the app's visuals." />
+                <Label>
                     <Label.FormattedText>
                         <FormattedString>
                             <Span Text="To promote all skill levels, players can" />
-                            <Span Text=" &quot;Subscirbe&quot; " TextColor="LimeGreen" />
+                            <Span Text=" &quot;Subscribe&quot; " TextColor="LimeGreen" />
                             <Span Text="to a particular difficulty." />
                         </FormattedString>
                     </Label.FormattedText>
                 </Label>
 
-                <Label FontSize="Body">
+                <Label>
                     <Label.FormattedText>
                         <FormattedString>
                             <Span Text="To add a little spice to the game, players can" />
@@ -65,9 +65,35 @@
                     FontSize="Title"
                     Text="Subscription System"
                     TextColor="White" />
-                <Label FontSize="Body" Text="Players can, from their profile, choose a difficulty score to subscribe to, from 1 to 100." />
-                <Label FontSize="Body" Text="The app will then notify the player, when a room matching their level is present." />
-                <Label FontSize="Body" Text="The difficulty level is based on the rooms average SPM and Blocked stats, ignoring the top stat." />
+                <Label Text="Players can, from their profile, choose a difficulty score to subscribe to." />
+                <Label Text="The app will then notify the player, when a room matching their level is present." />
+                <Label Text="The difficulty level is based on the average SPM and Blocked stats in a given room." />
+
+                <Label Margin="0,20,0,0" Text="Beginner:       (SPM/6) + (Blocked% * 0.8) = 1 - 20" />
+                <Label Text="Intermidiate: (SPM/6) + (Blocked% * 0.8) = 21-40" />
+                <Label Text="Old School:   (SPM/6) + (Blocked% * 0.8) = 41-60" />
+                <Label Text="Pro:                (SPM/6) + (Blocked% * 0.8) = 61 &gt;" />
+                <Label
+                    Margin="0,50,0,14"
+                    FontSize="Title"
+                    Text="Player Picks"
+                    TextColor="White" />
+                <Label Text="Players are notified when a player in their &quot;Picks&quot; is online" />
+                <Label Text="Players can see how many other players follow them" />
+
+                <Label
+                    Margin="0,50,0,14"
+                    FontSize="Subtitle"
+                    Text="For more information about the game visit:"
+                    TextColor="White" />
+                <Label
+                    Text="https://gewaltig.net/"
+                    TextColor="White"
+                    TextDecorations="Underline">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding OpenWebCommand}" />
+                    </Label.GestureRecognizers>
+                </Label>
 
             </StackLayout>
         </ScrollView>

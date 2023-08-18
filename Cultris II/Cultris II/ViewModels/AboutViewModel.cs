@@ -10,7 +10,7 @@ namespace Cultris_II.ViewModels
         public AboutViewModel()
         {
             Title = "About";
-            OpenWebCommand = new Command(async () => await Browser.OpenAsync("https://aka.ms/xamarin-quickstart"));
+            OpenWebCommand = new Command(async () => await Browser.OpenAsync("https://gewaltig.net/"));
         }
 
         public ICommand OpenWebCommand { get; }
