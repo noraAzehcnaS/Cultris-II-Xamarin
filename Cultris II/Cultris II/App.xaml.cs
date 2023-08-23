@@ -1,5 +1,4 @@
-﻿using Cultris_II.Services;
-using Cultris_II.Views;
+﻿using Cultris_II.Views;
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -12,8 +11,6 @@ namespace Cultris_II
         public App()
         {
             InitializeComponent();
-
-            DependencyService.Register<MockDataStore>();
             MainPage = new AppShell();
         }
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Cultris_II.ViewModels;
+using System;
 using System.ComponentModel;
 using System.Threading.Tasks;
 using Xamarin.Essentials;
@@ -12,6 +13,7 @@ namespace Cultris_II.Views
         public AboutPage()
         {
             InitializeComponent();
+            BindingContext = new AboutViewModel();
         }
 
         protected override void OnAppearing()

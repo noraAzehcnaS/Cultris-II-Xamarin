@@ -3,12 +3,8 @@
     x:Class="Cultris_II.Views.AboutPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:vm="clr-namespace:Cultris_II.ViewModels"
     Title="{Binding Title}">
 
-    <ContentPage.BindingContext>
-        <vm:AboutViewModel />
-    </ContentPage.BindingContext>
 
     <Grid RowDefinitions="Auto,*">
         <StackLayout

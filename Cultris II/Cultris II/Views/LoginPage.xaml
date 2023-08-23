@@ -4,13 +4,23 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:local="clr-namespace:Cultris_II.Views.CustomRenderer"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     Shell.NavBarIsVisible="False"
     mc:Ignorable="d">
     <ContentPage.Content>
         <StackLayout Padding="10,0,10,0" VerticalOptions="Center">
+            <local:C2_Entry
+                Keyboard="Email"
+                Placeholder="email"
+                Text="{Binding Email}" />
+            <local:C2_Entry
+                IsPassword="True"
+                Placeholder="password"
+                Text="{Binding Password}" />
             <Button
                 Command="{Binding LoginCommand}"
+                CommandParameter="{Binding EntriesHaveText}"
                 Text="Login"
                 VerticalOptions="Center" />
         </StackLayout>

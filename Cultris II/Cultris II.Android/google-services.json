@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "915377188961",
+    "project_id": "cultris-ii",
+    "storage_bucket": "cultris-ii.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:915377188961:android:ded819d218c3eb8a137a20",
+        "android_client_info": {
+          "package_name": "com.azteca.cultris_ii"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "915377188961-1963fu2tv49djgpchqbikk7rjgpun663.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCMhEusBEDa6P-Avuao_lL-R7KltLUHen8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "915377188961-1963fu2tv49djgpchqbikk7rjgpun663.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Cultris_II.Models
+﻿namespace Cultris_II.Models
 {
-    class Player
+    public class Player
     {
-        public int Id { get; set; }
+        public string Id { get; set; }
         public string Name { get; set; }
         public string ImageSource { get; set; }
         public string CountryCode { get; set; }
