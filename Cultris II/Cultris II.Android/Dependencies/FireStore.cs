@@ -17,7 +17,7 @@ using Xamarin.KotlinX.Coroutines;
 [assembly:Dependency(typeof(Cultris_II.Droid.Dependencies.FireStore))]
 namespace Cultris_II.Droid.Dependencies
 {
-    public class FireStore : IDataService, IOnCompleteListener
+    public class FireStore : Java.Lang.Object, IDataService, IOnCompleteListener
     {
         private readonly List<Player> players;
         bool hasReadPlayers = false;
@@ -25,13 +25,6 @@ namespace Cultris_II.Droid.Dependencies
         {
             players = new List<Player>();
         }
-        public IntPtr Handle => throw new NotImplementedException();
-
-        public int JniIdentityHashCode => throw new NotImplementedException();
-
-        public JniObjectReference PeerReference => throw new NotImplementedException();
-
-        public JniPeerMembers JniPeerMembers => throw new NotImplementedException();
 
         public JniManagedPeerStates JniManagedPeerState => throw new NotImplementedException();
 
@@ -40,11 +33,6 @@ namespace Cultris_II.Droid.Dependencies
             var collection = FirebaseFirestore.Instance.Collection("followedPlayers");
             collection.Document(player.Id).Delete();
             return true;
-        }
-
-        public void Dispose()
-        {
-            throw new NotImplementedException();
         }
 
         public void Disposed()
@@ -134,9 +122,5 @@ namespace Cultris_II.Droid.Dependencies
             throw new NotImplementedException();
         }
 
-        public void UnregisterFromRuntime()
-        {
-            throw new NotImplementedException();
-        }
     }
 }
